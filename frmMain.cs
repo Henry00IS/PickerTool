@@ -1,27 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PickerTool
 {
     public partial class frmMain : Form
     {
-        const string copyright = "Copyright © Henry de Jongh and http://00laboratories.com/ 2016";
+        private const string copyright = "Copyright © Henry de Jongh 2016-2023";
 
         public frmMain()
         {
             InitializeComponent();
-        }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private int m_Delay = 0;
@@ -128,17 +117,7 @@ namespace PickerTool
             Height = 80 + m_ColorResults.Height;
 
             m_ColorResults.Location = new Point(4, 0);
-            m_ColorResults.TextBoxRGB.Text = e.Color.R.ToString() + ", " + e.Color.G.ToString() + ", " + e.Color.B.ToString();
-            m_ColorResults.TextBoxRGBF.Text = (e.Color.R / 255.0f).ToString("0.000").Replace(",", ".") + ", " + (e.Color.G / 255.0f).ToString("0.000").Replace(",", ".") + ", " + (e.Color.B / 255.0f).ToString("0.000").Replace(",", ".");
-            m_ColorResults.TextBoxHEX.Text = "#" + e.Color.R.ToString("X2") + e.Color.G.ToString("X2") + e.Color.B.ToString("X2");
-            ColorConversions.HSLColor HSL = ColorConversions.FromRGB(e.Color.R, e.Color.G, e.Color.B);
-            m_ColorResults.TextBoxHSL.Text = HSL.H.ToString("0.00000000").Replace(",",".") + ", " + HSL.S.ToString("0.00000000").Replace(",", ".") + ", " + HSL.L.ToString("0.00000000").Replace(",", ".");
-            double H = 0.0d;
-            double S = 0.0d;
-            double V = 0.0d;
-            ColorConversions.ColorToHSV(e.Color, out H, out S, out V);
-            m_ColorResults.TextBoxHSV.Text = H.ToString("0.00000000").Replace(",", ".") + ", " + S.ToString("0.00000000").Replace(",", ".") + ", " + V.ToString("0.00000000").Replace(",", ".");
-            m_ColorResults.PanelColorPreview.BackColor = e.Color;
+            m_ColorResults.SetColor(e.Color);
             Button_Cancel.Enabled = false;
         }
 
@@ -147,7 +126,8 @@ namespace PickerTool
         /// </summary>
         private void Button_Cancel_Click(object sender, EventArgs e)
         {
-            if (m_Controller != null) {
+            if (m_Controller != null)
+            {
                 m_Controller.Close();
                 Button_Cancel.Enabled = false;
             }

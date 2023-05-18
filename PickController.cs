@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PickerTool
@@ -14,7 +10,9 @@ namespace PickerTool
         {
             public System.Drawing.Color Color;
         }
+
         public delegate void ColorPickedEventHandler(object sender, ColorPickedEventArgs e);
+
         public event ColorPickedEventHandler ColorPicked;
 
         private frmMain m_MainWindow;
@@ -49,7 +47,7 @@ namespace PickerTool
                 data.Overlay.FormClosed += Overlay_FormClosed;
                 m_ScreenData.Add(data);
             }
-            
+
             foreach (ScreenData data in m_ScreenData)
             {
                 data.Overlay.Show();

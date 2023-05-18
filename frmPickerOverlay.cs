@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PickerTool
@@ -121,7 +115,7 @@ namespace PickerTool
                 e.Graphics.DrawRectangle(Pens.Red, m_ViewRectangle);
 
                 // zoomed image under the mouse.
-                m_ZoomGraphics.DrawImage(m_Screenshot, new Rectangle(0,0,8,8), m_ClientCursor.X - 4, m_ClientCursor.Y - 4, 8, 8, GraphicsUnit.Pixel);
+                m_ZoomGraphics.DrawImage(m_Screenshot, new Rectangle(0, 0, 8, 8), m_ClientCursor.X - 4, m_ClientCursor.Y - 4, 8, 8, GraphicsUnit.Pixel);
                 e.Graphics.DrawImage(m_Zoom, m_ClientCursor.X - 32 - 4, m_ClientCursor.Y - 32 - 4, 64, 64);
                 // draw grid.
                 e.Graphics.DrawImage(m_Grid, m_ClientCursor.X - 32 - 4, m_ClientCursor.Y - 32 - 4);

@@ -111,6 +111,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\gear16.png" />
+    <None Include="Resources\toggle-hex-3x.png" />
+    <None Include="Resources\toggle-case.png" />
     <None Include="Resources\delay.png" />
     <None Include="Resources\cancel.png" />
     <None Include="Resources\edit-delete-5.ico" />

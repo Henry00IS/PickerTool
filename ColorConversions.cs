@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PickerTool
 {
-    class ColorConversions
+    public class ColorConversions
     {
         public struct HSLColor
         {
@@ -47,7 +43,6 @@ namespace PickerTool
                 {
                     S = (float)(_Delta / (2.0f - _Max - _Min));
                 }
-
 
                 if (_R == _Max)
                 {

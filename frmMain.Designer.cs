@@ -194,7 +194,6 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "Picker Tool";
-            this.Load += new System.EventHandler(this.frmMain_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

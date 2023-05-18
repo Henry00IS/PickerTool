@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 
@@ -24,11 +17,14 @@ namespace PickerTool
         private LinearGradientBrush m_Brush;
 
         private Color m_Color1;
-        public Color Color1 { get { return m_Color1; } set { m_Color1 = value; if(DesignMode) Invalidate(); } }
+        public Color Color1
+        { get { return m_Color1; } set { m_Color1 = value; if (DesignMode) Invalidate(); } }
         private Color m_Color2;
-        public Color Color2 { get { return m_Color2; } set { m_Color2 = value; if (DesignMode) Invalidate(); } }
+        public Color Color2
+        { get { return m_Color2; } set { m_Color2 = value; if (DesignMode) Invalidate(); } }
         private LinearGradientMode m_GradientMode;
-        public LinearGradientMode GradientMode { get { return m_GradientMode; } set { m_GradientMode = value; if (DesignMode) Invalidate(); } }
+        public LinearGradientMode GradientMode
+        { get { return m_GradientMode; } set { m_GradientMode = value; if (DesignMode) Invalidate(); } }
 
         protected override void OnPaint(PaintEventArgs e)
         {

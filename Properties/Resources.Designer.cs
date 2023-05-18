@@ -123,9 +123,39 @@ namespace PickerTool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gear16 {
+            get {
+                object obj = ResourceManager.GetObject("gear16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap process_stop {
             get {
                 object obj = ResourceManager.GetObject("process-stop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toggle_case {
+            get {
+                object obj = ResourceManager.GetObject("toggle-case", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toggle_hex_3x {
+            get {
+                object obj = ResourceManager.GetObject("toggle-hex-3x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
